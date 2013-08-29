@@ -1,0 +1,30 @@
+
+body {
+	background-color: yellow
+}
+
+#container {
+	width: 875px ;
+}
+
+#big_pic {
+height: 315px;
+}
+
+header {
+	background-color: blue
+}
+
+img {
+	border 2px solid black
+}
+
+
+.male {
+background-color: lightpink
+}
+
+.female {
+background-color: lightblue
+}
+
