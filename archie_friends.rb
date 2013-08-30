@@ -45,23 +45,38 @@ def create_page
 	File.open('dog_page.html', 'w') do |f|
 
 		f.write( "<DOCTYPE! html>\n<html>\n<head>\n\t<link rel=\"stylesheet\" type = \"text/css\" href=\"style.css\">\n\t<title>Friends of Archie Brindleton</title>\n</head>\n<body>\n")
-		
-		puts "File Created"
+		f.write("<div id=\"topper\">\n")
+		f.write("\t<div id=\"search\">Archie Brindleton</div>\n")
+		f.write("</div>\n")
+		f.write("\t<div id=\"container\">\n")
+		f.write("\t\t<div id=\"big_pic\"><img src=\"./top_archie_crop.jpg\" >  </div>\n") 
+	
+		f.write("\t\t<div id=\"info\">\n")
+		f.write("\t\t\t<div id=\"inset\"><img src=\"./archie_inset.jpg\" >\n</div>")
+		f.write("\t\t\t<h1>Archie Brindleton</h1>\n")
+		f.write("\t\t\</div>\n")
+		f.write("\t<div id=\"friends\">\n")
+
 		
 		get_names
 		get_photos
 
 		iterations = [@name_array.length, @image_array.length].min
+
+		f.write("\t<h2 id=\"smells\">Archies Friends: #{iterations}       Butt Smells: 8,967</h2>")
 		# names = @name_array.length
 		# photos = @photo_array.length
 
 		# photos < names ? dogs = photos : dogs = names
-
+		switcher = [3,4,7,8,11,12,15,16,19,20]
 		iterations.times do |i|
 		# @name_array.each_with_index do |name, i|
 			 i.even? ? gender = "male"  : gender = "female"
-		# 5.times do |name|
-			f.write("\t<div class=\"#{gender}\">\n\t\t#{@name_array.shift}\n\t\t#{@image_array.shift}\n\t</div>\n")
+
+			 # 5.times do |name|
+			 switcher.include?(i) ? side = "switched" : side = "unswitched"
+			f.write("\t<div class=\"#{gender} #{side}\">\n\t\t<h2 class=\"dog_name\">#{@name_array.shift}<h2>\n\t\t#{@image_array.shift}\n\t</div>\n")
+			
 			# puts "\t<div class=\"#{gender}\">\n\t\t#{@name_array.shift}\n\t\t#{@image_array.shift}\n\t</div>\n"
 
 		end
@@ -70,8 +85,9 @@ def create_page
 
 		# puts @name_array
 
-
-
+		f.write("\t</div>\n")
+		f.write("\t</div>\n")
+		f.write("</div>\n")
 		f.write("</body>\n</html>")
 		# puts "\n</body>\n</html>\n\n"
 	end
