@@ -47,7 +47,7 @@ ul li {
 	background-color:white;
 	border: 1px solid black;
 	width:100%;
-	height:37500px;
+	height:3750px;
 }
 
 #search {
@@ -98,31 +98,37 @@ ul li {
 }*/
 
 .male, .female {
-	width: 45%;
+	/*width: 400px;*/
+	width:46%;
 	margin: 10px;
 	height:180px;
 	/*border: 1px solid black;*/
 }
 
+#bitches li {
+
+text-align:  right;
+margin-right: 40px;
+}
 .clear { clear:both;}
 
 
-.male {
+div .male {
 background-color: #5578ac;
 float: left;
 }
 
-.female {
+div .female {
 background-color: lightpink;
 float: right;
 }
 
-.male .switched {
-background-color: lightblue;
+div .male .switched {
+background-color: #5578ac;
 float: right;
 }
 
-.female .switched {
+div .female .switched {
 background-color: lightpink;
 float: left;
 }

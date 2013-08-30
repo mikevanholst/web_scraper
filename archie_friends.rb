@@ -52,12 +52,13 @@ def create_page
 		f.write("\t\t<div id=\"big_pic\"><a href=\"https://www.facebook.com/ArchieBrindleton\"></a> </div>\n") 
 	#</a><img src=\"./top_archie_crop.jpg\" >
 		f.write("\t\t<div id=\"info\">\n")
-		f.write("\t\t\t<div id=\"inset\"><img src=\"./archie_inset.jpg\" ></div>\n")
+		f.write("\t\t\t<div id=\"inset\"><a href=\"https://www.facebook.com/ArchieBrindleton\"><img src=\"./archie_inset.jpg\" ></a></div>\n")
 		f.write("\t\t\t<h1 id=\"name_plate\" >Archie Brindleton</h1>\n")
 		f.write("\t\t<h2 id=\"smells\"><ul><li>Archie's Friends: 396</li><li id=\"butts\"> Butt Smells: 8,967</li><ul></h2>\n")
 		f.write("\t\t\</div>\n")
 		f.write("\t<div id=\"friends\">\n")
-
+		f.write("\t\t<h2 id=\"bitches\"><ul><li>Homies</li><li id=\"butts\">Bitches</li><ul></h2>\n")
+	
 		
 		get_names
 		get_photos
@@ -77,11 +78,11 @@ def create_page
 			 # 5.times do |name|
 			 switcher.include?(i) ? side = "switched" : side = "unswitched"
 			f.write("\t<div class=\"#{gender} #{side}\">\n\t\t<h2 class=\"dog_name\">#{@name_array.shift}<h2>\n\t\t#{@image_array.shift}\n\t</div>\n\n")
-			# f.write("\t\t<div class=\"clear\"></div>\n") if gender == "female"
+			f.write("\t\t<div class=\"clear\"></div>\n") if gender == "female"
 			# puts "\t<div class=\"#{gender}\">\n\t\t#{@name_array.shift}\n\t\t#{@image_array.shift}\n\t</div>\n"
 
 		end
-		# friend_list = 
+		# friend_list = #4066e0
 		# get_names
 
 		# puts @name_array
