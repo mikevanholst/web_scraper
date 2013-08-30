@@ -45,15 +45,16 @@ def create_page
 	File.open('dog_page.html', 'w') do |f|
 
 		f.write( "<DOCTYPE! html>\n<html>\n<head>\n\t<link rel=\"stylesheet\" type = \"text/css\" href=\"style.css\">\n\t<title>Friends of Archie Brindleton</title>\n</head>\n<body>\n")
-		f.write("<div id=\"topper\">\n")
-		f.write("\t<div id=\"search\">Archie Brindleton</div>\n")
-		f.write("</div>\n")
+		f.write("\t<div id=\"topper\">\n")
+		f.write("\t\t<div id=\"search\">Archie Brindleton</div>\n")
+		f.write("\t</div>\n")
 		f.write("\t<div id=\"container\">\n")
-		f.write("\t\t<div id=\"big_pic\"><img src=\"./top_archie_crop.jpg\" >  </div>\n") 
-	
+		f.write("\t\t<div id=\"big_pic\"><a href=\"https://www.facebook.com/ArchieBrindleton\"></a> </div>\n") 
+	#</a><img src=\"./top_archie_crop.jpg\" >
 		f.write("\t\t<div id=\"info\">\n")
-		f.write("\t\t\t<div id=\"inset\"><img src=\"./archie_inset.jpg\" >\n</div>")
-		f.write("\t\t\t<h1>Archie Brindleton</h1>\n")
+		f.write("\t\t\t<div id=\"inset\"><img src=\"./archie_inset.jpg\" ></div>\n")
+		f.write("\t\t\t<h1 id=\"name_plate\" >Archie Brindleton</h1>\n")
+		f.write("\t\t<h2 id=\"smells\"><ul><li>Archie's Friends: 396</li><li id=\"butts\"> Butt Smells: 8,967</li><ul></h2>\n")
 		f.write("\t\t\</div>\n")
 		f.write("\t<div id=\"friends\">\n")
 
@@ -63,7 +64,7 @@ def create_page
 
 		iterations = [@name_array.length, @image_array.length].min
 
-		f.write("\t<h2 id=\"smells\">Archies Friends: #{iterations}       Butt Smells: 8,967</h2>")
+		
 		# names = @name_array.length
 		# photos = @photo_array.length
 
@@ -75,8 +76,8 @@ def create_page
 
 			 # 5.times do |name|
 			 switcher.include?(i) ? side = "switched" : side = "unswitched"
-			f.write("\t<div class=\"#{gender} #{side}\">\n\t\t<h2 class=\"dog_name\">#{@name_array.shift}<h2>\n\t\t#{@image_array.shift}\n\t</div>\n")
-			
+			f.write("\t<div class=\"#{gender} #{side}\">\n\t\t<h2 class=\"dog_name\">#{@name_array.shift}<h2>\n\t\t#{@image_array.shift}\n\t</div>\n\n")
+			# f.write("\t\t<div class=\"clear\"></div>\n") if gender == "female"
 			# puts "\t<div class=\"#{gender}\">\n\t\t#{@name_array.shift}\n\t\t#{@image_array.shift}\n\t</div>\n"
 
 		end
@@ -87,7 +88,7 @@ def create_page
 
 		f.write("\t</div>\n")
 		f.write("\t</div>\n")
-		f.write("</div>\n")
+		f.write("\t</div>\n")
 		f.write("</body>\n</html>")
 		# puts "\n</body>\n</html>\n\n"
 	end

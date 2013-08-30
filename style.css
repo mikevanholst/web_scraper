@@ -1,8 +1,9 @@
 
+
 body {
 	margin:0;
 	padding:0;
-	/*background-color: lightgrey;*/
+	background-color: lightgrey;
 }
 
 #container {
@@ -13,12 +14,29 @@ body {
 
 #big_pic {
 	height: 315px;
-	background-image:url('archie_top_crop');
+	/*background-image:url('./archie_top_crop.jpg');*/
 	z-index:-1;
+	width:875px;
+	background-image: url(top_archie_crop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:green;
+}
+
+ul li {
+	list-style-image: none;
+	 display: inline; 
+	 width: 400px;
+}
+
+#butts {
+
+	float:right;
+	/*margin-right: 50px;*/
 }
 
 #topper {
-	background-color: lightblue;
+	background-color:  #5578ac;
 	height: 50px;
 	padding: 10px;
 	border: 1px solid black;
@@ -29,6 +47,7 @@ body {
 	background-color:white;
 	border: 1px solid black;
 	width:100%;
+	height:37500px;
 }
 
 #search {
@@ -50,7 +69,7 @@ body {
 #inset {
 	border: 1px solid black;
 	padding: 3px;
-	margin-top: -140px;
+	margin-top: -110px;
 	margin-left: 30px;
 	float:left;
 	z-index:-2;
@@ -58,9 +77,9 @@ body {
 
 #name_plate {
 	
-	/*float:right;*/
-	/*margin-right: 120px;
-	padding-left: 50px;*/
+	
+	margin-left: 30%;
+	
 }
 
 .img {
@@ -81,14 +100,15 @@ body {
 .male, .female {
 	width: 45%;
 	margin: 10px;
-	height:200px;
+	height:180px;
 	/*border: 1px solid black;*/
 }
 
+.clear { clear:both;}
 
 
 .male {
-background-color: lightblue;
+background-color: #5578ac;
 float: left;
 }
 
